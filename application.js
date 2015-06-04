@@ -55,7 +55,7 @@ $(document).on("keydown", function(e) {
 
 });
 
-  $(document).on('mouseover', '.blank', function (e) {
+  $(document).on('mousemove', '.blank', function (e) {
     var $div = $(this);
     $div.removeClass();
     $div.addClass('blank')
