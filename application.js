@@ -38,7 +38,7 @@ var changeClass = ''
 $(document).on("keydown", function(e) {
 
   if(e.keyCode == 65) {
-    chawngeClass = 'red'
+    changeClass = 'red'
   }
   else if(e.keyCode == 83) {
     changeClass = 'blue'
