@@ -51,10 +51,8 @@ $(document).on("keydown", function(e) {
   }
   else if(e.keyCode == 82) {
     changeClass = 'rainbow'
-  }
-  else if(e.keyCode == 82) {
-    changeClass = 'rainbow'
   };
+
 });
 
   $(document).on('mouseover', '.blank', function (e) {
@@ -63,30 +61,33 @@ $(document).on("keydown", function(e) {
     $div.addClass('blank')
     $div.addClass(changeClass);
     $div.addClass(appendClass);
+    // $('rainbow').html(getColor(251));
   });
 
-  function rainbow(noOfColors){
-    frequency=5/noOfColors;
-    for (var i = 0; i < noOfColors; ++i){
-      r =   Math.sin(frequency*i + 0) * (127) + 128;
-      g =   Math.sin(frequency*i + 2) * (127) + 128;
-      b =   Math.sin(frequency*i + 4) * (127) + 128;
-      div = $("<div class='rainbow'></div>");
-      div.replace("{r}",Math.floor(r));
-      div.replace("{g}",Math.floor(g));
-      div.replace("{b}",Math.floor(b));
+    function getColor(noOfColors){
+        htmlString ="";
+        frequency=5/noOfColors;
+        for (var i = 0; i < noOfColors; ++i){
+            r =   Math.sin(frequency*i + 0) * (127) + 128;
+            g =   Math.sin(frequency*i + 2) * (127) + 128;
+            b =   Math.sin(frequency*i + 4) * (127) + 128;
+            div='<div class="color" style="background-color:rgb({r},{g},{b});">  </div>';
+            div=div.replace("{r}",Math.floor(r));
+            div=div.replace("{g}",Math.floor(g));
+            div=div.replace("{b}",Math.floor(b));
+            htmlString  += div;
+        }
+        return htmlString ;
     }
-  }
-
-
-  $(document).on('keydown',function(e){
-    if (e.keyCode == 82){
-      var $link = $(this);
-      $link.removeClass('red');
-      $link.addClass('rainbow')
-      $(document).on('mouseover','.ranbow',function(){
+    $('#rainbow').on('mouseover','.color',function(){
         $( this ).fadeTo( "slow", 0.20 );
-      });
-    }
-  });
+     });
+
+    $('#rainbow').html(getColor(251));
+
+
+    setInterval(function() {
+      $('.color').fadeTo("slow", 1);
+    }, 10000);
+
 

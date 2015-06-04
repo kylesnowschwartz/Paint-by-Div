@@ -13,9 +13,9 @@ div { /*margin: 1px;*/}
 
 .red {background-color: red}
 
-.rainbow {
-	background-color:rgb({r},{g},{b});
-}
+/*.rainbow {
+	background-color: rgb({r},{g},{b});
+}*/
 
 .blue {background-color: blue}
 
@@ -23,5 +23,19 @@ div { /*margin: 1px;*/}
 
 .joshua {background-image: url('http://www.buckybox.com/images/team-joshua-63101086.jpg'); border-radius: 100%;background-size: cover; }
 
+#rainbow {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#rainbow div{
+    display:inline-block;
+    width:5px;
+    height:100%;
+    padding: 0px;
+    margin: 0px;
+
+}
 
 
