@@ -17,3 +17,10 @@ div { /*margin: 1px;*/}
 	background-color:rgb({r},{g},{b});
 }
 
+.blue {background-color: blue}
+
+.circle {border-radius: 100%;}
+
+.joshua {background-image: url('http://www.buckybox.com/images/team-joshua-63101086.jpg'); background-size: cover; }
+
+
