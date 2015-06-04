@@ -33,7 +33,7 @@ Easel.prototype.renderGrid = function () {
 };
 
 
-
+var appendClass = ''
 var changeClass = ''
 $(document).on("keydown", function(e) {
 
@@ -44,10 +44,13 @@ $(document).on("keydown", function(e) {
     changeClass = 'blue'
   }
   else if(e.keyCode == 68) {
-    changeClass = 'circle'
+    appendClass = 'circle'
   }
   else if(e.keyCode == 87) {
     changeClass = 'joshua'
+  }
+  else if(e.keyCode == 82) {
+    changeClass = 'rainbow'
   }
   else if(e.keyCode == 82) {
     changeClass = 'rainbow'
@@ -55,8 +58,11 @@ $(document).on("keydown", function(e) {
 });
 
   $(document).on('mouseover', '.blank', function (e) {
-    var $link = $(this);
-    $link.addClass(changeClass);
+    var $div = $(this);
+    $div.removeClass();
+    $div.addClass('blank')
+    $div.addClass(changeClass);
+    $div.addClass(appendClass);
   });
 
   function rainbow(noOfColors){
