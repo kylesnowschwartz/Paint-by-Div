@@ -13,4 +13,7 @@ div { /*margin: 1px;*/}
 
 .red {background-color: red}
 
+.rainbow {
+	background-color:rgb({r},{g},{b});
+}
 
