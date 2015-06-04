@@ -38,22 +38,19 @@ var changeClass = ''
 $(document).on("keydown", function(e) {
 
   if(e.keyCode == 65) {
-    changeClass = 'red'
+    chawngeClass = 'red'
   }
-  else if(e.keyCode == 76) {
+  else if(e.keyCode == 83) {
     changeClass = 'blue'
-  };
   }
-  else if(e.keyCode == 76) {
-    changeClass = 'blue'
-  };
+  else if(e.keyCode == 68) {
+    changeClass = 'circle'
   }
-  else if(e.keyCode == 76) {
-    changeClass = 'blue'
-  };
+  else if(e.keyCode == 87) {
+    changeClass = 'joshua'
   }
-  else if(e.keyCode == 76) {
-    changeClass = 'blue'
+  else if(e.keyCode == 82) {
+    changeClass = 'rainbow'
   };
 });
 
