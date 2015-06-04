@@ -13,11 +13,13 @@ div { /*margin: 1px;*/}
 
 .red {background-color: red}
 
+.rainbow {
+	background-color:rgb({r},{g},{b});
+}
+
 .blue {background-color: blue}
 
 .circle {border-radius: 100%;}
-
-.rainbow {}
 
 .joshua {background-image: url('http://www.buckybox.com/images/team-joshua-63101086.jpg'); background-size: cover; }
 
