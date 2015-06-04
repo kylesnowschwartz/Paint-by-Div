@@ -65,13 +65,28 @@ $(document).on("keydown", function(e) {
     $div.addClass(appendClass);
   });
 
+  function rainbow(noOfColors){
+    frequency=5/noOfColors;
+    for (var i = 0; i < noOfColors; ++i){
+      r =   Math.sin(frequency*i + 0) * (127) + 128;
+      g =   Math.sin(frequency*i + 2) * (127) + 128;
+      b =   Math.sin(frequency*i + 4) * (127) + 128;
+      div = $("<div class='rainbow'></div>");
+      div.replace("{r}",Math.floor(r));
+      div.replace("{g}",Math.floor(g));
+      div.replace("{b}",Math.floor(b));
+    }
+  }
 
-// function bindListeners() {
-//   document.body.onkeyup = function(e) {
-//     if(e.keyCode == 13) {
 
-//     }
-//   }
-// }
+  $(document).on('keydown',function(e){
+    if (e.keyCode == 82){
+      var $link = $(this);
+      $link.removeClass('red');
+      $link.addClass('rainbow')
+      $(document).on('mouseover','.ranbow',function(){
+        $( this ).fadeTo( "slow", 0.20 );
+      });
+    }
+  });
 
-// as mouse goes over divs, classes are added
