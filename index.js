@@ -1,6 +1,7 @@
 $(document).ready(function() {
-  console.log('LOGGGGGG');
-  var easel = new Easel(150);
+  $windowHeight = $(window).height();
+  $windowWidth = $(window).width();
+  var easel = new Easel($windowWidth, $windowHeight);
   easel.renderGrid();
 
 

@@ -2,15 +2,15 @@
 
 html, body {  position: relative; height: 100%; }
 
-div { margin: 1px;}
+div { /*margin: 1px;*/}
 
 #grid { position: relative; margin: 0 auto; }
 
 
-.row { overflow-x: hidden; height: 14px; position: relative; }
+.row { /*overflow-x: hidden;*/ height: 7px; position: relative; margin: 1px; }
 
-.blank { display: inline-block; width: 12px; height: 100%; background-color: #cdcdcd;}
+.blank { display: inline-block; width: 7px; height: 100%; background-color: #cdcdcd; margin: 0.5px;}
 
-
+.red {background-color: red}
 
 
