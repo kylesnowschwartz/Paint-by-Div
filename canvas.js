@@ -25,19 +25,25 @@ $(document).on("keydown", function(e) {
    curColor = colorYellow
 
  }
- else if(e.keyCode == 75) {
-  function flash() {
- if(flashStep==1) {
- document.bgColor="#B20000";
- flashStep=2;
- }
- else {
- document.bgColor="FFFF66";
- flashStep=1;
- }
-}
-var flashStep = 1;
-var task = window.setInterval(flash,100);
+else if(e.keyCode == 75) {
+
+     var flash = function () {
+       if(flashStep == 1) {
+         document.bgColor="#B20000 ";
+         flashStep = 2;
+       } else {
+         document.bgColor="FFFF66";
+         flashStep = 1;
+       }
+     }
+     var flashStep = 1;
+     var task = window.setInterval(flash, 500);
+
+     var stop = function () {
+       window.clearInterval(task)
+       document.bgColor = "#FFF";
+     }
+     window.setTimeout(stop, 5000)
  }
 
 
