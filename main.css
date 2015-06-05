@@ -9,12 +9,12 @@ html, body {
 
 div { /*margin: 1px;*/}
 
-#grid { position: relative; margin: 0 auto; }
+#grid { position: relative; margin: 0 auto; display: show }
 
 
 .row { /*overflow-x: hidden;*/ height: 7px; position: relative; margin: 1px; }
 
-.blank { display: inline-block; width: 7px; height: 100%; background-color: ; margin: 0.5px;}
+.blank { display: inline-block; width: 7px; height: 7px; background-color: #ccc; margin: 0.5px;}
 
 .red {background-color: red}
 
@@ -26,7 +26,7 @@ div { /*margin: 1px;*/}
 
 .circle {border-radius: 100%;}
 
-.joshua {background-image: url('http://www.buckybox.com/images/team-joshua-63101086.jpg'); border-radius: 100%;background-size: cover; }
+.joshua {width: 20px; height: 20px; background-image: url('http://www.buckybox.com/images/team-joshua-63101086.jpg'); border-radius: 100%;background-size: cover; }
 
 #rainbow {
   height: 100%;
