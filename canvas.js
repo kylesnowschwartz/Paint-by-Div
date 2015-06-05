@@ -27,25 +27,31 @@ $(document).on("keydown", function(e) {
  }
 else if(e.keyCode == 75) {
 
-     var flash = function () {
-       if(flashStep == 1) {
-        console.log('log1')
-         $('#grid, #canvas').css('background-color', "#B20000");
-         flashStep = 2;
-       } else {
-        console.log('log2')
-         $('#grid, #canvas').css('background-color', "#FFFF66");
-         flashStep = 1;
-       }
-     }
-     var flashStep = 1;
-     var task = window.setInterval(flash, 500);
+     var dancingman = function () {
+      $('#grid, #canvas').css('background-image', 'url(http://media.giphy.com/media/g6dm5eMVxxo2Y/giphy.gif)', 'background-repeat', 'no-repeat')
+      }
+     var task = window.setInterval(dancingman, 500);
 
      var stop = function () {
        window.clearInterval(task)
-       $('#grid, #canvas').css('background-color', "#faebd7");
+       $('#grid, #canvas').css('background-image', "");
      }
+
      window.setTimeout(stop, 5000)
+     // var flash = function () {
+     //   if(flashStep == 1) {
+     //    console.log('log1')
+     //     $('#grid, #canvas').css('background-color', "#ff3399");
+     //     flashStep = 2;
+     //   } else {
+     //    console.log('log2')
+     //     $('#grid, #canvas').css('background-color', "#0033cc");
+     //     flashStep = 1;
+     //   }
+     // }
+     // var flashStep = 1;
+     // var task = window.setInterval(flash, 500);
+
  }
 
 
