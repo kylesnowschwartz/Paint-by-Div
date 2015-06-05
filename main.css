@@ -13,7 +13,7 @@ div { /*margin: 1px;*/}
 
 .row { /*overflow-x: hidden;*/ height: 7px; position: relative; margin: 1px; }
 
-.blank { display: inline-block; width: 10px; height: 10px; background-color: #ccc; margin: 0.5px;}
+.blank { display: inline-block; width: 15px; height: 15px; background-color: #ccc; margin: 0.5px;}
 
 .red {background-color: #cc0000; opacity: 0.7;}
 
@@ -21,7 +21,7 @@ div { /*margin: 1px;*/}
 
 .circle {border-radius: 100%;}
 
-.joshua {width: 20px; height: 20px; background-image: url('http://www.buckybox.com/images/team-joshua-63101086.jpg'); border-radius: 100%;background-size: cover; }
+.joshua {width: 25px; height: 25px; background-image: url('http://www.buckybox.com/images/team-joshua-63101086.jpg'); border-radius: 100%;background-size: cover; }
 
 .rainbow {
     background-color: rgb({r},{g},{b});
