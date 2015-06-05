@@ -37,17 +37,16 @@ $(document).ready(function() {
     else if(e.keyCode == 68) {
       if ($lastDiv.hasClass(appendClass)) {
         appendClass = ''
-    } else {
+      } else {
         appendClass = 'circle';
-    }
+      }
 
     } else if(e.keyCode == 66) {
       if ($lastDiv.hasClass(appendClass)) {
         appendClass = ''
-    } else {
+      } else {
         appendClass = 'big';
-    }
-
+      }
     }
     else if(e.keyCode == 87) {
       changeClass = 'joshua'
