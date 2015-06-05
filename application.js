@@ -1,3 +1,27 @@
+$(document).ready(function() {
+
+var c = document.getElementById("canvas")
+
+function draw() {
+  var ctx = c.getContext("2d")
+  ctx.canvas.width = window.innerWidth;
+  ctx.canvas.height = window.innerHeight;
+
+  $('#canvas').mousemove(function(e){
+ var mouseX = e.pageX - this.offsetLeft;
+ var mouseY = e.pageY - this.offsetTop;
+ ctx.moveto(0,0)
+ ctx.lineTo(200,100);
+ ctx.stroke();
+   
+  });
+}
+
+}):
+
+
+
+
 function Cell () {
   this.$element = $("<div class='blank'></div>");
 }
