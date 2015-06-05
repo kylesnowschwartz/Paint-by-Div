@@ -17,11 +17,13 @@ var clickColor = new Array();
 
 $(document).on("keydown", function(e) {
 
+
   if(e.keyCode == 76) {
    curColor = colorRed
   }
   else if(e.keyCode == 73) {
    curColor = colorYellow
+
  }
  else if(e.keyCode == 75) {
   function flash() {
@@ -43,7 +45,9 @@ var task = window.setInterval(flash,100);
 
 
 
-$('#canvas').mousedown(function(e){
+$('#canvas').on("mousedown",function(e){
+  var audio = $(".audiofile audio")[0];
+  audio.play();
   var mouseX = e.pageX - this.offsetLeft;
   var mouseY = e.pageY - this.offsetTop;
 
@@ -51,6 +55,14 @@ $('#canvas').mousedown(function(e){
   addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
   redraw();
 });
+
+$('#canvas').mouseup(function(){
+  console.log("fg")
+  var audio = $(".audiofile audio")[0];
+  audio.pause();
+  paint = false;
+});
+
 
 $('#canvas').mousemove(function(e){
   if(paint){
@@ -100,4 +112,7 @@ function redraw(){
   };
 };
 
+
 });
+
+
