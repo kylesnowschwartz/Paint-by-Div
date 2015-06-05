@@ -4,7 +4,7 @@ function Cell () {
   this.div = $("<div class='blank'></div>");
 }
 
-$(document).mousemove(function(e){
+$('#grid').mousemove(function(e){
   var mouseX = e.pageX
   var mouseY = e.pageY
 

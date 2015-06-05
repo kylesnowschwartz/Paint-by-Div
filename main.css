@@ -1,7 +1,5 @@
-
-
-html, body {  
-	position: relative; 
+html, body {
+	position: relative;
 	height: 100%;
 	width: 100%;
 	margin: 0;
@@ -9,7 +7,8 @@ html, body {
 
 div { /*margin: 1px;*/}
 
-#grid { position: relative; margin: 0 auto; display: show }
+#grid {  height: 100%; width: 50%; position: relative; margin: 0 auto; float: left; }
+#canvas { height: 100%; width: 50%; position: relative; float: right;}
 
 
 .row { /*overflow-x: hidden;*/ height: 7px; position: relative; margin: 1px; }

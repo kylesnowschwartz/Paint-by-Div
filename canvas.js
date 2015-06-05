@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
 context = document.getElementById('canvas').getContext("2d");
-context.canvas.width = window.innerWidth;
+context.canvas.width = window.innerWidth / 2;
 context.canvas.height = window.innerHeight;
 
 var colorPurple = "#cb3594";
@@ -17,17 +17,17 @@ var clickColor = new Array();
 
 $(document).on("keydown", function(e) {
 
-  if(e.keyCode == 65) {
+  if(e.keyCode == 76) {
    curColor = colorRed
   }
-  else if(e.keyCode == 83) {
+  else if(e.keyCode == 73) {
    curColor = colorYellow
  }
- else if(e.keyCode == 68) {
+ else if(e.keyCode == 75) {
   function flash() {
  if(flashStep==1) {
  document.bgColor="#B20000";
- flashStep=2; 
+ flashStep=2;
  }
  else {
  document.bgColor="FFFF66";
@@ -37,12 +37,7 @@ $(document).on("keydown", function(e) {
 var flashStep = 1;
 var task = window.setInterval(flash,100);
  }
- else if(e.keyCode == 87) {
 
- }
- else if(e.keyCode == 82) {
-   curColor = 'rainbow'
- };
 
 });
 
@@ -51,7 +46,7 @@ var task = window.setInterval(flash,100);
 $('#canvas').mousedown(function(e){
   var mouseX = e.pageX - this.offsetLeft;
   var mouseY = e.pageY - this.offsetTop;
-    
+
   paint = true;
   addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
   redraw();
@@ -87,11 +82,11 @@ function addClick(x, y, dragging)
 
 function redraw(){
   context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
-  
+
   context.lineJoin = "round";
   context.lineWidth = 5;
-      
-  for(var i=0; i < clickX.length; i++) {    
+
+  for(var i=0; i < clickX.length; i++) {
     context.beginPath();
     if(clickDrag[i] && i){
       context.moveTo(clickX[i-1], clickY[i-1]);
