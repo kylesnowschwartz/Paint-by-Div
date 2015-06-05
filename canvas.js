@@ -29,10 +29,12 @@ else if(e.keyCode == 75) {
 
      var flash = function () {
        if(flashStep == 1) {
-         document.bgColor="#B20000 ";
+        console.log('log1')
+         $('#grid, #canvas').css('background-color', "#B20000");
          flashStep = 2;
        } else {
-         document.bgColor="FFFF66";
+        console.log('log2')
+         $('#grid, #canvas').css('background-color', "#FFFF66");
          flashStep = 1;
        }
      }
@@ -41,7 +43,7 @@ else if(e.keyCode == 75) {
 
      var stop = function () {
        window.clearInterval(task)
-       document.bgColor = "#FFF";
+       $('#grid, #canvas').css('background-color', "#faebd7");
      }
      window.setTimeout(stop, 5000)
  }

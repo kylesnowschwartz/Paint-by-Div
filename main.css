@@ -7,8 +7,8 @@ html, body {
 
 div { /*margin: 1px;*/}
 
-#grid {  height: 100%; width: 50%; position: relative; margin: 0 auto; float: left; }
-#canvas { height: 100%; width: 50%; position: relative; float: right;}
+#grid {  height: 100%; width: 50%; position: relative; margin: 0 auto; float: left; background-color: #faebd7}
+#canvas { height: 100%; width: 50%; position: relative; float: right; background-color: #faebd7}
 
 
 .row { /*overflow-x: hidden;*/ height: 7px; position: relative; margin: 1px; }
