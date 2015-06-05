@@ -41,6 +41,13 @@ $(document).ready(function() {
         appendClass = 'circle';
     }
 
+    } else if(e.keyCode == 66) {
+      if ($lastDiv.hasClass(appendClass)) {
+        appendClass = ''
+    } else {
+        appendClass = 'big';
+    }
+
     }
     else if(e.keyCode == 87) {
       changeClass = 'joshua'

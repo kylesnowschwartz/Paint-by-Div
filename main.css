@@ -36,5 +36,8 @@ div { /*margin: 1px;*/}
 #joshuaDiv {
   display: hidden;
 }
+.big {
+  width: 75px; height: 75px;
+}
 
 
